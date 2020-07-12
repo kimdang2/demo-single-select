@@ -3,8 +3,8 @@ import Beginners from './Beginners.jsx';
 import Intermediates from './Intermediates.jsx';
 import Experts from './Experts.jsx';
 
-const CurrentAttendees = ({attendees}) => {
-
+const CurrentAttendees = (props) => {
+  const attendees = props.attendees;
   const beginner = [];
   const inter = [];
   const expert = [];
@@ -22,7 +22,7 @@ const CurrentAttendees = ({attendees}) => {
     <div className="attendees">
       <h2>Attendees</h2>
       <h3>Beginner</h3>
-      {beginner.map((person,index) => <Beginners key={index} person={person}/>)}
+      {beginner.map((person,index) => <Beginners key={index} person={person} />)}
 
       <h3>Intermediate</h3>
       {inter.map((person,index) => <Intermediates key={index} person={person}/>)}

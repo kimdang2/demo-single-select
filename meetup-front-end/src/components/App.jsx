@@ -13,6 +13,7 @@ class App extends React.Component {
 
     this.getAttendees = this.getAttendees.bind(this);
     this.postForm = this.postForm.bind(this);
+    this.updateInfo = this.updateInfo.bind(this);
   }
 
   componentDidMount(){
@@ -41,11 +42,22 @@ class App extends React.Component {
     });
   }
 
+  updateInfo(item){
+    console.log('person', item)
+    // $.ajax({
+    //   url: ' http://localhost:3000/attendees',
+    //   type: 'put',
+    //   data:item,
+    //   success: (data) => {this.getAttendees()},
+    //   error: (err) => console.log(err)
+    // });
+  }
+
   render(){
     return (
       <div className="main">
         <RegisterAttendees postForm={this.postForm}/>
-        <CurrentAttendees attendees={this.state.attendees}/>
+        <CurrentAttendees attendees={this.state.attendees} updateInfo={this.updateInfo}/>
     </div>
     )
   }
