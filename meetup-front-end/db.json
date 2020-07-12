@@ -39,6 +39,17 @@
       "email": "kaylee@serenity.com",
       "shirt": "S",
       "skillLevel": "expert"
+    },
+    {
+      "id": 6
+    },
+    {
+      "firstName": "Kim",
+      "lastName": "Dang",
+      "email": "kimdang229@gmail.com",
+      "shirt": "S",
+      "skillLevel": "beginner",
+      "id": 7
     }
   ]
 }
