@@ -1,4 +1,4 @@
-const data = [
+const sampleData = [
   {value: "Small",logo:"/shirt.svg"},
   {value: "Medium", logo:"/shirt.svg"},
   {value: "Large", logo:"/shirt.svg"},
@@ -6,4 +6,4 @@ const data = [
   {value: "XXLarge",logo:"/shirt.svg"},
 ];
 
-export default data;
+export default sampleData;
