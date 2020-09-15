@@ -34,7 +34,10 @@ span {
 }
 
 .dropdown-menu {
+<<<<<<< HEAD
   width: auto;
+=======
+>>>>>>> 73506e50af549ef249dcb0202fa09d725c525f54
   border-width: 0px 1px 1px 1px;
   border-style: solid;
   border-color: #a9a9a952;
