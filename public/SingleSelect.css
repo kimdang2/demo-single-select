@@ -1,4 +1,5 @@
 .single-select {
+  position: absolute;
   display: flex;
   align-items: center;
 }
@@ -6,7 +7,6 @@
 .dropdown-container {
   border-radius: 5px;
   border: 1px solid #a9a9a952;
-  position: relative;
 }
 
 .dropdown-container:focus-within{
@@ -34,7 +34,6 @@ span {
 }
 
 .dropdown-menu {
-  position: relative;
   border-width: 0px 1px 1px 1px;
   border-style: solid;
   border-color: #a9a9a952;
