@@ -1,5 +1,7 @@
 import React from 'react';
 import SingleSelect from './SingleSelect.jsx';
+import shirtSize from '../data/shirtSize.js'
+import level from '../data/level.js'
 
 class RegisterAttendees extends React.Component {
   constructor(props){
@@ -52,11 +54,11 @@ class RegisterAttendees extends React.Component {
         </label>
 
         <label>Shirt Size (XS, S, M, L, XL, XXL):
-          <SingleSelect/>
+          <SingleSelect options={shirtSize}/>
         </label>
 
         <label>Experience Level (beginner, intermediate, expert):
-          <input type="text" name="skillLevel" value={this.state.skillLevel} onChange={this.handleChange}/>
+          <SingleSelect options={level}/>
         </label>
         <button onClick={this.handleSubmit}>REGISTER</button>
       </div>

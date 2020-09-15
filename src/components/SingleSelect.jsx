@@ -1,16 +1,15 @@
 import React, { useEffect, useState, useRef } from "react";
-import options from '../data/data'
 
-const SingleSelect = () => {
+const SingleSelect = ({options}) => {
   const [showDisplay, setDisplay] = useState(false);
   const [search, setSearch] = useState("");
-
 
   // Display select value from given list of options
   const setOptions = item => {
     setSearch(item);
     setDisplay(false);
   }
+
 
   const clearMarkIcon = (<svg onClick={() => setSearch('')} height="20" width="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false" style={{fill:'transparent'}}><path d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"></path></svg>);
 
@@ -39,11 +38,12 @@ const SingleSelect = () => {
         {showDisplay &&
         <div className="dropdown-menu">
           {options
-            .filter(value => ( (value.toLowerCase()).indexOf(search.toLowerCase()) !== -1))
+            .filter( ({value}) => ( (value.toLowerCase()).indexOf(search.toLowerCase()) !== -1))
             .map((item, i) => {
             return (
-              <div className="dropdown-value" key={i} onClick={() => setOptions(item)}>
-              <span>{item}</span>
+              <div className="dropdown-value" key={i} onClick={() => setOptions(item.value)}>
+              <span>{item.value}</span>
+              <img src={item.logo} />
             </div>
             );
             })
@@ -51,6 +51,7 @@ const SingleSelect = () => {
         </div>}
       </div>
     </div>
+
   );
 };
 

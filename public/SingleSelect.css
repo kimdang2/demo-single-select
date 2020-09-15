@@ -5,6 +5,7 @@
 }
 
 .dropdown-container {
+  width: 350px; 
   border-radius: 5px;
   border: 1px solid #a9a9a952;
 }
@@ -34,6 +35,7 @@ span {
 }
 
 .dropdown-menu {
+  width: auto;
   border-width: 0px 1px 1px 1px;
   border-style: solid;
   border-color: #a9a9a952;
@@ -43,6 +45,9 @@ span {
   /* Scollbars */
   max-height: 250px;
   overflow: auto;
+  /* Reposition stack order (menu will appears in front of elements)*/
+  z-index: 1;
+  position :relative
 }
 
 .dropdown-value {
