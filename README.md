@@ -25,4 +25,4 @@ The homepage of your application:
 | `/attendees`      | POST   | Add an attendee           |
 
 ## Demo
-![Demo](https://media.giphy.com/media/U4XqRGAIzQZYAe4eOd/giphy.gif)
+![Demo](https://media.giphy.com/media/Lm5IDs3h5JiwDgtwfC/giphy.gif)
